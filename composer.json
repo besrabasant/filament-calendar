@@ -1,0 +1,39 @@
+{
+    "name": "filament/filament-calendar",
+    "description": "A Filament Calendar Livewire Component.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Basant Besra",
+            "email": "besrabasant@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Filament\\FilamentCalendar\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.6|^9.0",
+        "illuminate/view": "^8.6|^9.0",
+        "livewire/livewire": "^2.6",
+        "spatie/laravel-package-tools": "^1.9"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Filament\\Calendar\\Providers\\FilamentCalendarServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
