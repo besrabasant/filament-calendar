@@ -1,5 +1,5 @@
 {
-    "name": "filament/filament-calendar",
+    "name": "rogue-one/filament-calendar",
     "description": "A Filament Calendar Livewire Component.",
     "type": "library",
     "license": "MIT",
