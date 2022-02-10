@@ -1,8 +1,10 @@
 <?php
 
-namespace Filament\Calendar\Providers;
+namespace Filament\FilamentCalendar;
 
 
+use Filament\FilamentCalendar\Http\Livewire\Calendar;
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,7 +21,7 @@ class FilamentCalendarServiceProvider extends PackageServiceProvider
 
     public function packageRegistered()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/filament-calendar.php', 'filament-calendar');
+        $this->mergeConfigFrom(__DIR__ . '/../config/filament-calendar.php', 'filament-calendar');
     }
 
     public function packageBooted()
@@ -29,6 +31,6 @@ class FilamentCalendarServiceProvider extends PackageServiceProvider
 
     protected function bootLivewireComponents(): void
     {
-
+        Livewire::component('filament.calendar', Calendar::class);
     }
 }
